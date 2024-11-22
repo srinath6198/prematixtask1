@@ -1,0 +1,461 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+.menuBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.logo-menu{
+    display: flex;
+    align-items: center;
+}
+
+.logo-menu a{
+    text-decoration: none;
+font-size: 20px;
+color: black;
+font-weight: 500;
+}
+
+.logo{
+    width: 50px;
+}
+.menu-links{
+ display: flex;
+ justify-content: space-evenly;
+    width: 50vw;
+    
+}
+.signin-logo{
+    display: flex;
+    align-items: center;
+   
+}
+.signIn-btn{
+    display: flex;
+    align-items: center;
+    gap:0px 40px;
+   
+    color: black;
+    font-weight: 500;
+}
+.signIn-btn p{
+    cursor: pointer;
+}
+.signIn-btn p:hover{
+    color: rgb(30, 164, 253);
+}
+.signin-logo button{
+    background: none;
+    border: none;
+    font-size: 15px;
+    
+   }
+.signin-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.signin-logo:hover{
+    background-color: rgb(233, 85, 233);
+    border-radius: 10px;
+    color: white;
+    
+    
+}
+
+.bussiness-offers{
+ display: flex;
+ width: 100vw;
+ padding:100px 50px;
+ background-color: rgb(241, 241, 241);
+}
+.bussiness-offers p{
+    font-size: 20px;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+}
+.bussiness-offers-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  
+    padding:0px 40px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+.herder-gradient {
+    font-size: 3rem; /* Adjust the font size */
+    font-weight: bold;
+    background: linear-gradient(90deg, #2ee95d, #f8e71c, #4a90e2);
+    background-size: 200% 200%; /* Create a larger background for animation */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* WebKit specific clipping */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to reveal the background */
+    text-fill-color: transparent; /* Standard property for transparent text */
+    animation: gradientAnimation 3s ease infinite; /* Apply the animation */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%; 
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .bussiness-btn button{
+ border: none;
+ /* background: none; */
+ background-color: purple;
+ border-radius: 20px;
+ padding: 10px;
+ width: 300px;
+ color: white;
+ margin-top: 50px;
+ font-size: 20px;
+
+  }
+  .bussiness-btn button:hover{
+    transform: translate(10px);
+    
+  }
+
+.business-video {
+    max-width: 40%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .business-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    display: block;
+    outline: none;
+    pointer-events: none; 
+  }
+  .pozo-offers{
+    text-align: center;
+    margin: 60px 0px;
+  }
+  .pozo-offers h1{
+    font-size: 40px;
+    margin: 010px 0px;
+  }
+
+
+
+
+
+/* Modal Styling */
+#signInModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+/* Close Button Styling */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Profile Form Input Styling */
+#editProfileForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+#editProfileForm input:focus {
+    border-color: #4A90E2; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Soft glow effect */
+}
+
+/* Submit Button Styling */
+#editProfileForm button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#editProfileForm button:hover {
+    background-color: purple; /* Darker shade on hover */
+}
+
+/* Cancel Button Styling */
+#cancelEditBtn {
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#cancelEditBtn:hover {
+    background-color: #C0392B; /* Darker shade on hover */
+}
+
+/* Profile Details Section */
+#profileDetails {
+    padding: 20px 0;
+}
+
+#profileDetails p {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Edit Profile Button */
+#editProfileBtn {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#editProfileBtn:hover {
+    background-color:  rgb(180, 9, 180);
+}
+
+/* General Modal Button Styling */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Logout Button Styling */
+#logoutBtn {
+    background-color: #E74C3C; /* Red color for logout */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background-color: #C0392B; /* Darker red shade on hover */
+}
+
+/* General Modal Button Styling */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+/* image slider style  */
+
+
+.header-img {
+    /* background: linear-gradient(to right, #2e2927, #201d1c, #393838, #3f3e3e); */
+    background-color: rgb(35, 35, 35);
+    padding: 0px 60px;
+    display: flex;
+    border-radius: 50px;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    
+}
+
+.header-img .header-para {
+    color: white;
+}
+.header-para h1{
+    font-size: 50px;
+}
+.header-para p{
+    margin: 20px 0px;
+    font-size: 20px;
+}
+.header-img .header-app {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-img .header-app button {
+    border: none;
+    background-color:  purple;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.header-img .header-rate {
+    display: flex;
+    gap: 20px;
+}
+.header-img .header-rate h1{
+    font-size: 30px;
+    
+}
+.header-rate p{
+    font-size: 14px;
+    line-height: 0.1; 
+}
+.header-img img{
+    width: 45vw;
+}
+
+
+
+
+
+/* image clider style  */
+
+.carousel {
+    position: relative;
+    width: 95vw;
+    border-radius: 20px;
+    /* max-width: 1000px; */
+    margin:60px auto ;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Slider that holds all the slides */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Individual slide */
+.slide {
+    min-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Caption content */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.caption h2 {
+    margin-bottom: 10px;
+}
+
+.caption p {
+    margin-bottom: 20px;
+}
+
+.caption button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Optional: Add transitions for arrows */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

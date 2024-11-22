@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/Admin/Desktop/Mini-project/loginPage/signin.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In &amp; Login</title>
+    <link rel="stylesheet" href="./Sign In &amp; Login_files/signin.css">
+    
+</head>
+<body>
+    <div class="form-container">
+        <div class="tabs">
+            <button id="signInTab" class="active" onclick="showSignIn()">Sign In</button>
+            <button id="loginTab" onclick="showLogin()">Login</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signInForm" class="form active">
+            <h1>Sign In to Your Account</h1>
+            <form id="signinForm" onsubmit="return validateSignInForm()">
+                <label for="first-name"></label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required="">
+                <span id="firstNameError" class="error"></span>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required="">
+                <span id="lastNameError" class="error"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required="">
+                <span id="emailError" class="error"></span>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="10" minlength="10" pattern="^\d{10}$" required="">
+                <span id="phoneError" class="error"></span>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="text" id="dob" name="dob" required="" pattern="\d{2}-\d{2}-\d{4}" placeholder="DD-MM-YYYY">
+                <span id="dobError" class="error"></span>
+
+                <label for="password">Password:</label>
+                <div class="password-container">
+                  <input type="password" id="password" name="password" placeholder="Enter your password" required="">
+                  <span id="togglePassword" class="eye-icon">👁</span> <!-- Eye icon -->
+                </div>
+                <span id="passwordError" class="error"></span>
+                
+                <label for="confirm-password">Confirm Password:</label>
+                <div class="password-container">
+                  <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required="">
+                  <span id="toggleConfirmPassword" class="eye-icon">👁</span> <!-- Eye icon -->
+                </div>
+                <span id="confirmPasswordError" class="error"></span>
+                
+                
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="form">
+            <h1>Login to Your Account</h1>
+            <form id="loginFormSubmit" onsubmit="return validateLoginForm()">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required="">
+                <span id="loginEmailError" class="error"></span>
+
+                <label for="login-password">Password:</label>
+<div class="password-container">
+  <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required="">
+  <span id="toggleLoginPassword" class="eye-icon">👁</span> <!-- Eye icon -->
+</div>
+<span id="loginPasswordError" class="error"></span>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./Sign In &amp; Login_files/signin.js.download"></script>
+
+
+</body></html>

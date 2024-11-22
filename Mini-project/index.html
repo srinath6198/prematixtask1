@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="menuBar">
+       <div class="logo-menu">
+        <div class="logo">
+            <img src="./Assets/download.jfif" alt="logo" width="100%">
+        </div>
+        <div class="menu-links">
+            <a href="#">Industries</a>
+            <a href="#">Offerings</a>
+            <a href="#">Testimonials</a>
+        </div>
+       </div>
+       <div class="signIn-btn">
+        <p>APPLE STORE</p>
+        <div class="signin-logo">
+            <img src="./Assets/signin.png" alt="" width="20%">
+            <button id="signInBtn">Sign In</button>
+            <span id="userName" style="display: none;"></span> <!-- Placeholder for the user's name -->
+        </div>
+    </div>
+    
+        </div>
+    </nav>
+<!-- 
+    <div class="bussiness-offers">
+        <div class="bussiness-offers-left">
+            <h1>Simplify your business operation with pozo apps powered by GenAI</h1>
+            <div class="herder-gradient">Gradient Text Animation</div>
+            <p>Our SaaS offering is designed for businesses of all sizes from small & medium enterprises to 
+                large enterprises</p>
+            <div class="bussiness-btn">
+                <button>Experience Now</button>
+            </div>
+        </div>
+
+        <div class="business-video">
+            <video src="./Assets/Landing_Video-3264f9d6.mp4" controls autoplay muted loop>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="pozo-offers">
+        <h1>POZO Offerings</h1>
+        <p>Think Business, Think POZO Discover what POZO can do for you</p>
+    </div> -->
+
+
+    <!-- Sign In Button -->
+<!-- <button id="signInBtn">Sign In</button> -->
+<div id="signInModal" style="display:none;">
+    <div class="modal-content">
+        <!-- Close Button -->
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+
+        <h2>User Profile</h2>
+
+        <div id="profileDetails">
+            <!-- Display user profile details here -->
+            <p><strong>First Name:</strong> <span id="userFirstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="userLastName"></span></p>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="userPhone"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="userDob" ></span></p>
+        </div>
+
+        <!-- Edit Profile Button -->
+        <button id="editProfileBtn">Edit Profile</button>
+
+        <!-- Logout Button -->
+         
+        <button id="logoutBtn">Logout</button>
+
+        <!-- Edit Profile Form (Initially Hidden) -->
+        <div id="editProfileForm" style="display:none;" autocomplete="off">
+            <form id="profileForm">
+                <input type="text" id="editFirstName" placeholder="First Name" required  autocomplete="off">
+                <input type="text" id="editLastName" placeholder="Last Name" required  autocomplete="off">
+                <input type="email" id="editEmail" placeholder="Email" required  autocomplete="off">
+                <input type="text" id="editPhone" placeholder="Phone" required  autocomplete="off">
+                <input type="text" id="editDob" name="editDob" required   autocomplete="off">
+                <button type="submit">Save Changes</button>
+            </form>
+            <button id="cancelEditBtn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<section class="header-img">
+    <div class="header-para">
+        <h1>Unleash the full <br> potential of Ai </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam provident
+            et reiciendis minima eius amet, ad quo accusantium doloribus </p>
+        <div class="header-app">
+            <button>Get the App <i style="color: rgb(0, 0, 0);" class="fas fa-arrow-right"></i></button>
+            <p>More</p>
+        </div>
+        <div class="header-rate">
+            <div>
+                <h1>4.8</h1>
+                <p>Raiting An AppStore</p>
+            </div>
+
+            <div>
+                <h1>4.8</h1>
+                <p>Raiting An AppStore</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-img">
+        <img src="./Assets/hand.png" alt="">
+    </div>
+</section>
+
+
+
+
+<section>
+    <div class="carousel">
+        <div class="slider">
+            <div class="slide" style="background-image: url('./Assets/img.jpg');">
+                <div class="caption">
+                    <h2>Spectra Parijatha</h2>
+                    <p>Whitefield, Bangalore</p>
+                    <button>See More</button>
+                    <button>Contact</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('./Assets/img1.jpg');">
+                <div class="caption">
+                    <h2>JRC Wild Woods</h2>
+                    <p>Sarjapur Road, Bengaluru</p>
+                    <button>See More</button>
+                    <button>Contact</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('./Assets/img2.jpg');">
+                <div class="caption">
+                    <h2>CasaGrand Casablanca</h2>
+                    <p>Badamanavarathekaval, Bangalore</p>
+                    <button>See More</button>
+                    <button>Contact</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('./Assets/img3.jpg');">
+                <div class="caption">
+                    <h2>Butterfly</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button>See More</button>
+                    <button>Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+
+    <script src="./index.js"></script> 
+</body>
+</html>
